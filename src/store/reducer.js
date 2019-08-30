@@ -2,7 +2,7 @@ import { CHANGE_INPUT , ADD_ITEM , DELETE_ITEM } from './actionType'
 
 const defaultState = {
     inputValue:'',
-    list:['111','222 222','333 333 333']
+    list:['111','222','333']
 }
 
 export default (state=defaultState,action)=>{
@@ -17,7 +17,6 @@ export default (state=defaultState,action)=>{
         // newState.list = action.value
         newState.list = [...newState.list,newState.inputValue]
         newState.inputValue = ''
-        console.log(newState)
         return newState
     }
     if(action.type===DELETE_ITEM){
