@@ -55,8 +55,6 @@ const TodoListUI = (props)=>{
                 />
             </div>
         </div>
-
-
     )
 }
 export default TodoListUI
