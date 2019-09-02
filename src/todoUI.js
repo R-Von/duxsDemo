@@ -12,7 +12,6 @@ import 'antd/dist/antd.css'
 import { Input , Button , List , Icon} from 'antd'
 
 
-const data = [1,2,3]
 const TodoListUI = (props)=>{
     console.log(props)
     return (
@@ -22,6 +21,7 @@ const TodoListUI = (props)=>{
                     placeholder = "write something" 
                     style = {{width:'250px'}}
                     onChange = {props.changeInputValue} 
+                    value={props.inputValue}
                 />
                 <Button 
                     type="primary" 
@@ -30,6 +30,7 @@ const TodoListUI = (props)=>{
                     Add
                 </Button>
             </div>
+            
             <div style={{width:'300px',marginTop:'20px'}}>
                 <List 
                     bordered

@@ -7,7 +7,7 @@ import Todo from './todoUI'
 
 import store from './store' //引入store
 // import { CHANGE_INPUT , ADD_ITEM , DELETE_ITEM } from './store/actionType'
-import { changeInputAction , deleteItemAction , addItemAction } from './store/actionCreator'
+import { changeInputAction , deleteItemAction , addItemAction , getGithubList } from './store/actionCreator'
 
 class TodoList extends Component{
     constructor(props){
@@ -107,6 +107,10 @@ class TodoList extends Component{
         // }
         const action = deleteItemAction(index)
         store.dispatch(action)
+    }
+    componentDidMount(){
+        const action = getGithubList()
+        console.log(action)
     }
 }
 
